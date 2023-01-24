@@ -78,6 +78,8 @@ questions:
 
 1.  What are the dimensions of the dataset? What does each row
     represent?
+    
+    The data are 1458 rows by 123 columns. Each row is an observation of a particular country for a particular year.
 
 - The dataset spans a lot of years. We are only interested in data from
   year 2016.
@@ -87,6 +89,8 @@ questions:
 
 2.  What type of plot would you use to display the relationship between
     the personal freedom score, `pf_score`, and `pf_expression_control`?
+    
+    Since both the variables are numeric, it makes sense to use a scatterplot.
 
 - Create a new R code chunk and plot this relationship using the
   variable `pf_expression_control` as the predictor.
@@ -96,6 +100,8 @@ questions:
     most, of political pressures and controls on media content, would
     you be comfortable using a linear model to predict the personal
     freedom score?
+    
+    Tha data seem to follow a loose linear pattern. We could use `pf_expression_control` to predict `pf_score` using linear regression, but there is likely to be some degree of error.
 
 ## Task 4: Sum of squared residuals
 
@@ -151,6 +157,8 @@ Answer the following question:
     minimizing the sum of squares. Run the function several times. What
     was the smallest sum of squares that you got? How does it compare to
     your neighbour’s?
+    
+    Smallest I got was 105.853
 
 ## Task 5: The linear model
 
@@ -201,7 +209,11 @@ Using this equation…
 
 5.  Interpret the *y*-intercept.
 
+the y intercept of 4.288 indicates that a record with an expression control value of 0 would be predicted to have a score of 4.288
+
 6.  Interpret the slope
+
+the slope of 0.541 indicates that for every increas in expression control of 1, the predicted score would increase by 0.541.
 
 ## What is next?
 
