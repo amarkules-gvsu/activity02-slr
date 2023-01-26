@@ -3,6 +3,42 @@ title: "Activity 2 - Day 1"
 output: github_document
 ---
 
-```{setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+Load Libraries
+```{r}
+library(tidyverse)
+library(tidymodels)
+```
+
+```{r}
+(hfi <- read_csv("https://www.openintro.org/data/csv/hfi.csv"))
+```
+
+The Dataframe is 1458 rows by 123 columns
+
+
+```{r}
+hfi_2016 <- hfi %>%
+  filter(year == 2016)
+```
+
+```{r}
+hfi_2016 %>%
+  ggplot() + 
+  aes(y = pf_score, x = pf_expression_control) +
+  geom_point()
+```
+
+```{r}
+m1 <- lm(pf_score ~ pf_expression_control, data = hfi_2016)
+tidy(m1)
+```
+
+```{r}
+
+```
+
